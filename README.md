@@ -1,10 +1,14 @@
-- 👋 Hi, I’m @msubhangithub
-- 👀 I’m interested in Microsoft Azure DevOps, CICD Pipeline. 
-- 🌱 I’m currently learning AWS
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me on my email id - subhanatmd@gmail.com
+trigger:
+- main
 
-<!---
-msubhangithub/msubhangithub is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+- script: |
+    echo Add other actions to build,
+    echo test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
